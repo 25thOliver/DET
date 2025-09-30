@@ -1,3 +1,4 @@
+// src/routes/scrape.js
 import express from "express";
 import { scrapeUrl } from "../services/scraperService.js";
 
@@ -11,7 +12,10 @@ router.get("/scrape", async (req, res) => {
     const result = await scrapeUrl(url);
     res.json(result);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({
+      error: "Failed to scrape",
+      details: err.message,
+    });
   }
 });
 

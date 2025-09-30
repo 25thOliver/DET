@@ -1,27 +1,36 @@
+// src/services/scraperService.js
 import axios from "axios";
-
-const PYTHON_SCRAPER_URL = "http://scraper-python:7000/scrape";
-const NODE_SCRAPER_URL = "http://scraper-node:6000/scrape";
 
 export async function scrapeUrl(url) {
   try {
     // Try Python scraper first
-    const pyResponse = await axios.post(PYTHON_SCRAPER_URL, { url });
-    if (pyResponse.data.content && pyResponse.data.content.length > 500) {
-      return { ...pyResponse.data, source: "python" };
-    }
-
-    // If Python fails or too short → fallback to Node scraper
-    const nodeResponse = await axios.get(NODE_SCRAPER_URL, { params: { url } });
-    return { ...nodeResponse.data, source: "node" };
-
+    const pyRes = await axios.post("http://scraper-python:6001/scrape", { url });
+    return {
+      ...pyRes.data,
+      metadata: {
+        scraper_used: "python",
+        status: "success",
+        timestamp: new Date().toISOString(),
+      },
+    };
   } catch (err) {
-    // If Python throws error → try Node immediately
+    console.warn("[Fallback] Python scraper failed, trying Node…", err.message);
     try {
-      const nodeResponse = await axios.get(NODE_SCRAPER_URL, { params: { url } });
-      return { ...nodeResponse.data, source: "node" };
+      const nodeRes = await axios.get("http://scraper-node:6002/scrape", {
+        params: { url },
+      });
+      return {
+        ...nodeRes.data,
+        metadata: {
+          scraper_used: "node",
+          status: "success",
+          timestamp: new Date().toISOString(),
+        },
+      };
     } catch (nodeErr) {
-      throw new Error(`Both scrapers failed: ${nodeErr.message}`);
+      throw new Error(
+        `Both scrapers failed. Python: ${err.message}, Node: ${nodeErr.message}`
+      );
     }
   }
 }
