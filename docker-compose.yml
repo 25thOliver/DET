@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./api
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - MONGO_URI=mongodb://mongo:27017/digital-ethics
+    depends_on:
+      - mongo
+      - nlp
+      - scraper-python   # using Python scraper by default
+      # - scraper-node   # or Node scraper if you prefer
+
+  nlp:
+    build: ./nlp-service
+    ports:
+      - "5001:5000"
+    volumes:
+      - ~/.cache/huggingface:/root/.cache/huggingface
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+
+  scraper-python:
+    build: ./scraper/python-scraper
+    container_name: scraper-python
+    ports:
+      - "6001:6001"   # host:container
+    environment:
+      - PORT=6001
+
+  scraper-node:
+    build: ./scraper/node-scraper
+    container_name: scraper-node
+    ports:
+      - "6002:6000"   # host:container
+    environment:
+      - PORT=6000
+
+  mongo:
+    image: mongo:6
+    container_name: digital-ethics-mongo
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

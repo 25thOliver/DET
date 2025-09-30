@@ -1,0 +1,71 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+*.sqlite3
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# ---- Node.js ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ---- Package managers ----
+# Keep lock files for reproducible builds!
+# (remove these lines if you really don’t want them in git)
+# package-lock.json
+# yarn.lock
+# requirements.lock
+
+# ---- Docker ----
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Don’t commit local Docker volumes
+mongo_data/
+**/tmp/
+**/.cache/
+
+# ---- System / IDE ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.iml
+
+# ---- Hugging Face / NLP ----
+/nlp-service/.cache/
+/nlp-service/checkpoints/
+/nlp-service/models/
+
+# ---- Trafilatura cache ----
+/scraper/python-scraper/.trafilatura-cache/
+
+# ---- Logs ----
+logs/
+*.log
+*.out
+*.err
+
+# ---- Test / Coverage ----
+.coverage
+.pytest_cache/
+htmlcov/
+junit.xml
+coverage.xml
