@@ -11,7 +11,7 @@ services:
     depends_on:
       - mongo
       - nlp
-      - scraper-python   # ensure API waits for the Python scraper
+      - scraper-python   # API waits for Python scraper
 
   nlp:
     build: ./nlp-service
@@ -25,19 +25,18 @@ services:
 
   scraper-python:
     build: ./scraper/python-scraper
-    container_name: scraper-python
     ports:
       - "6001:6000"
+    depends_on:
+      - scraper-node     # so Python can fallback to Node if needed
 
   scraper-node:
     build: ./scraper/node-scraper
-    container_name: scraper-node
     ports:
       - "6002:6000"
 
   mongo:
     image: mongo:6
-    container_name: digital-ethics-mongo
     volumes:
       - mongo_data:/data/db
 

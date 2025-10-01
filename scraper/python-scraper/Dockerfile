@@ -18,4 +18,5 @@ COPY . .
 
 EXPOSE 6000
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "6000"]
+# Run Flask app via gunicorn on port 6000 to match compose mapping
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:6000", "--workers", "2", "--timeout", "120"]

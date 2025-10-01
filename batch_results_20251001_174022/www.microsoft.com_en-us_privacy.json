@@ -1,0 +1,54 @@
+{
+  "title": "Privacy",
+  "sections": [
+    {
+      "heading": "Privacy at Microsoft",
+      "content": " Privacy at Microsoft",
+      "summary": " Microsoft's privacy at Microsoft: Privacy at Microsoft is privacy at the heart of privacy issues . Microsoft privacy is a key component of the company's privacy policy ."
+    },
+    {
+      "heading": "Our commitment to privacy",
+      "content": " Our commitment to privacy",
+      "summary": " Our commitment to privacy is part of our commitment to our privacy, our privacy.  We are committed to the privacy of our family and friends.  Our commitment is to privacy. We will always be committed to privacy, we say ."
+    },
+    {
+      "heading": "Discover and control your data",
+      "content": " Discover and control your data",
+      "summary": "  Discover and control your data at the bottom of the page . Discover how you can control your personal data at a cost of up to $1,000 . Find out more about your privacy at the end of this article ."
+    },
+    {
+      "heading": "Learn more about privacy at Microsoft",
+      "content": " Learn more about privacy at Microsoft Your privacy is important to us. The privacy statement explains the personal data Microsoft processes, how Microsoft processes it, and for what purposes. Privacy for young people is a page where young users can learn about and understand Microsoft's privacy practices and how to use our products in a way that protects their privacy. This page also highlights topics that may be helpful for parents and guardians. The privacy report includes new developments in privacy at Microsoft. Find the latest information on what personal data we collect, how it may be used, and how you can manage and control your data. Do you have a question about Microsoft privacy? We explain how customers can export or delete personal data and more in the Privacy FAQs. Learn more about how Microsoft approaches building a more inclusive, equitable, sustainable, and trusted future for everyone, and how technology can and must benefit the future of humanity and our planet. If you are in the U.S, please see our U.S State Data Privacy Notice.",
+      "summary": " Privacy for young people is a page where young users can learn about and understand Microsoft's privacy practices . The privacy report includes new developments in privacy at Microsoft . Find the latest information on what personal data we collect, how it may be used, and how you can manage and control it ."
+    },
+    {
+      "heading": "What's new?",
+      "content": " What's new?",
+      "summary": " CNN.com will feature iReporter photos in a weekly Travel Snapshots gallery . Please submit your best shots for next week's gallery . Visit CNN iReport.com/Travel next Wednesday for a new gallery of snapshots ."
+    },
+    {
+      "heading": "Contact our team",
+      "content": " Contact our team",
+      "summary": "  Contact our team at www.mailonline.co.uk.uk . Contact us on Twitter or follow us on Facebook or in other social media platforms ."
+    }
+  ],
+  "related_links": [
+    "https://privacy.microsoft.com/",
+    "https://account.microsoft.com/privacy",
+    "https://aka.ms/PrivacyReport",
+    "https://privacy.microsoft.com/microsoft-consumer-health-data-privacy-policy",
+    "https://support.microsoft.com/topic/where-can-i-find-privacy-settings-in-microsoft-products-206f6928-2694-4adf-a50f-9edb95897d81",
+    "https://aka.ms/youngpeopleprivacy",
+    "https://aka.ms/PrivacyFAQ",
+    "https://aka.ms/USStatePrivacyNotice",
+    "https://privacy.microsoft.com/en-us",
+    "https://aka.ms/yourcaliforniaprivacychoices",
+    "https://www.microsoft.com/en-us/privacy#"
+  ],
+  "metadata": {
+    "scraper_used": "node",
+    "nlp_used": "distilbart-cnn-12-6",
+    "status": "success",
+    "timestamp": "2025-10-01T14:47:31.481Z"
+  }
+}

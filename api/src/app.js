@@ -12,7 +12,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "API is running" });
 });
 
-// Scrape routes
+// ✅ Mount the scrape router under /api
 app.use("/api", scrapeRouter);
 
 const PORT = process.env.PORT || 4000;

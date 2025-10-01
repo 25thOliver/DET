@@ -35,7 +35,12 @@ for url in URLS:
     entry = {"url": url, "status": None, "duration_sec": None, "output_file": None}
 
     try:
-        response = requests.get(API_ENDPOINT, params={"url": url}, timeout=TIMEOUT)
+        response = requests.post(
+        API_ENDPOINT,
+        json={"url": url},
+        timeout=TIMEOUT
+    )
+
         duration = round(time.time() - start_time, 2)
 
         if response.status_code == 200:
