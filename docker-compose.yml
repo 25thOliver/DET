@@ -11,8 +11,7 @@ services:
     depends_on:
       - mongo
       - nlp
-      - scraper-python   # using Python scraper by default
-      # - scraper-node   # or Node scraper if you prefer
+      - scraper-python   # ensure API waits for the Python scraper
 
   nlp:
     build: ./nlp-service
@@ -28,17 +27,13 @@ services:
     build: ./scraper/python-scraper
     container_name: scraper-python
     ports:
-      - "6001:6001"   # host:container
-    environment:
-      - PORT=6001
+      - "6001:6000"
 
   scraper-node:
     build: ./scraper/node-scraper
     container_name: scraper-node
     ports:
-      - "6002:6000"   # host:container
-    environment:
-      - PORT=6000
+      - "6002:6000"
 
   mongo:
     image: mongo:6

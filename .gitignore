@@ -69,3 +69,6 @@ logs/
 htmlcov/
 junit.xml
 coverage.xml
+
+# Batch folder/
+batch_results_20251001_153442/
