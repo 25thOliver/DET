@@ -4,17 +4,18 @@ import { chromium } from "playwright";
 const app = express();
 
 app.get("/health", (req, res) => {
-  res.json({ status: "Scraper is alive 🕷️" });
+  res.json({ status: "Node scraper is alive 🕷️" });
 });
 
 app.get("/scrape", async (req, res) => {
   const { url } = req.query;
   if (!url) return res.status(400).json({ error: "URL required" });
 
+  let browser;
   try {
-    const browser = await chromium.launch({
+    browser = await chromium.launch({
       headless: true,
-      executablePath: "/usr/bin/chromium"
+      executablePath: "/usr/bin/chromium", // works with Debian's chromium
     });
 
     const page = await browser.newPage();
@@ -24,41 +25,56 @@ app.get("/scrape", async (req, res) => {
       const sections = [];
       const elements = document.querySelectorAll("h1, h2, h3, p");
       let currentSection = { heading: null, content: "" };
+      const seenHeadings = new Set();
 
       elements.forEach((el) => {
         if (["H1", "H2", "H3"].includes(el.tagName)) {
-          if (currentSection.heading || currentSection.content) {
+          // Push last section if valid
+          if (currentSection.heading && currentSection.content) {
             sections.push(currentSection);
           }
-          currentSection = { heading: el.innerText.trim(), content: "" };
-        } else if (el.tagName === "P") {
-          currentSection.content += " " + el.innerText.trim();
+          const headingText = el.innerText.trim();
+          if (headingText && !seenHeadings.has(headingText)) {
+            seenHeadings.add(headingText);
+            currentSection = { heading: headingText, content: "" };
+          } else {
+            currentSection = { heading: null, content: "" }; // skip dup/empty
+          }
+        } else if (el.tagName === "P" && currentSection.heading) {
+          const text = el.innerText.trim();
+          if (text) {
+            currentSection.content += " " + text;
+          }
         }
       });
 
-      if (currentSection.heading || currentSection.content) {
+      // Push the final section if valid
+      if (currentSection.heading && currentSection.content) {
         sections.push(currentSection);
       }
 
+      // Collect privacy-related links (dedup + cap at 50)
       const relatedLinks = Array.from(document.querySelectorAll("a"))
         .map((a) => a.href)
-        .filter((href) => /(privacy|cookie|terms|policy)/i.test(href));
+        .filter((href) => /(privacy|cookie|terms|policy)/i.test(href))
+        .slice(0, 50);
 
       return {
-        title: document.title,
+        title: document.title || "Untitled",
         sections,
-        related_links: [...new Set(relatedLinks)]
+        related_links: [...new Set(relatedLinks)],
       };
     });
 
     await browser.close();
     res.json(data);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+  } catch (error) {
+    if (browser) await browser.close();
+    res.status(500).json({ error: "Scraping failed", details: error.message });
   }
 });
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 6000; // internal port = 6000
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Scraper running on port ${PORT}`);
+  console.log(`Node scraper running on port ${PORT}`);
 });
