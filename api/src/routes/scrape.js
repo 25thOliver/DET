@@ -62,14 +62,20 @@ router.post("/scrape", async (req, res) => {
     }
 
     // ----------------------------
-    // Step 3: Summarize with NLP (bounded)
+    // Step 3: Summarize with NLP (bounded and filtered)
     // ----------------------------
-    const MAX_SECTIONS = 20; // cap count to avoid long processing
-    const MAX_CHARS = 2000; // cap per section
-    const boundedSections = (sections || []).slice(0, MAX_SECTIONS).map((s) => ({
-      heading: s.heading,
-      content: (s.content || "").slice(0, MAX_CHARS),
-    }));
+    const MAX_SECTIONS = 15; // cap count to avoid long processing
+    const MIN_CHARS = 100; // minimum content length for summarization
+    const MAX_CHARS = 1500; // cap per section
+    
+    // Filter and prepare sections for NLP
+    const boundedSections = (sections || [])
+      .filter(s => s.content && s.content.trim().length >= MIN_CHARS) // Only meaningful content
+      .slice(0, MAX_SECTIONS)
+      .map((s) => ({
+        heading: s.heading,
+        content: (s.content || "").slice(0, MAX_CHARS),
+      }));
 
     let summaries = [];
     const shouldSkipNlp = (url || "").includes("policies.google.com");
