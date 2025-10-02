@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.mozilla.org/en-US/privacy/",
+    "status": "success",
+    "duration_sec": 31.0,
+    "output_file": "batch_results_20251002_052804/www.mozilla.org_en-US_privacy_.json"
+  },
+  {
+    "url": "https://www.facebook.com/privacy/policy",
+    "status": "success",
+    "duration_sec": 47.45,
+    "output_file": "batch_results_20251002_052804/www.facebook.com_privacy_policy.json"
+  },
+  {
+    "url": "https://policies.google.com/privacy",
+    "status": "success",
+    "duration_sec": 2.06,
+    "output_file": "batch_results_20251002_052804/policies.google.com_privacy.json"
+  },
+  {
+    "url": "https://www.apple.com/legal/privacy/en-ww/",
+    "status": "success",
+    "duration_sec": 31.25,
+    "output_file": "batch_results_20251002_052804/www.apple.com_legal_privacy_en-ww_.json"
+  },
+  {
+    "url": "https://twitter.com/en/privacy",
+    "status": "success",
+    "duration_sec": 31.67,
+    "output_file": "batch_results_20251002_052804/twitter.com_en_privacy.json"
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/privacy",
+    "status": "success",
+    "duration_sec": 38.34,
+    "output_file": "batch_results_20251002_052804/www.microsoft.com_en-us_privacy.json"
+  }
+]

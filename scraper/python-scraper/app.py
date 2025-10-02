@@ -12,13 +12,13 @@ app = Flask(__name__)
 # Helpers
 # -------------------------
 
-def safe_request(url, retries=2, delay=3):
+def safe_request(url, retries=3, delay=3):
     """Fetch URL with retry + timeout."""
     for i in range(retries):
         try:
             return requests.get(
                 url,
-                timeout=15,
+                timeout=25,
                 headers={"User-Agent": "Mozilla/5.0"}
             )
         except requests.RequestException as e:

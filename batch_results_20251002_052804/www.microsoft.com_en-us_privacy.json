@@ -1,0 +1,65 @@
+{
+  "title": "Privacy",
+  "sections": [
+    {
+      "heading": "Introduction",
+      "content": "Home Privacy dashboard Privacy report Privacy settings Privacy Statement Consumer Health Data Privacy Policy More All Microsoft Global\n            \n        \n            Microsoft 365\n            \n        \n        \n            Teams\n            \n        \n        \n            Copilot\n            \n        \n        \n            Windows\n            \n        \n        \n            Surface\n            \n        \n        \n            Xbox\n            \n        \n        \n            Deals\n            \n        \n        \n            Small Business\n            \n        \n        \n            Support",
+      "summary": ""
+    },
+    {
+      "heading": "Global",
+      "content": "Microsoft 365 Teams Copilot Windows Surface Xbox Deals Small Business Support Software\n    Software\n    \n        \n            Windows Apps\n            \n        \n        \n            AI\n            \n        \n        \n            Outlook\n            \n        \n        \n            OneDrive\n            \n        \n        \n            Microsoft Teams\n            \n        \n        \n            OneNote\n            \n        \n        \n            Microsoft Edge\n            \n        \n        \n            Moving from Skype to Teams Windows Apps AI Outlook OneDrive Microsoft Teams OneNote Microsoft Edge Moving from Skype to Teams PCs & Devices  \n    PCs & Devices  \n    \n        \n            Computers\n            \n        \n        \n            Shop Xbox\n            \n        \n        \n            Accessories\n            \n        \n        \n            VR & mixed reality\n            \n        \n        \n            Certified Refurbished\n            \n        \n        \n            Trade-in for cash Computers Shop Xbox Accessories VR & mixed reality Certified Refurbished Trade-in for cash Entertainment\n    Entertainment\n    \n        \n            Xbox Game Pass Ultimate\n            \n        \n        \n            PC Game Pass\n            \n        \n        \n            Xbox games\n            \n        \n        \n            PC games Xbox Game Pass Ultimate PC Game Pass Xbox games PC games Business\n    Business\n    \n        \n            Microsoft Cloud\n            \n        \n        \n            Microsoft Security\n            \n        \n        \n            Dynamics 365\n            \n        \n        \n            Microsoft 365 for business\n            \n        \n        \n            Microsoft Power Platform\n            \n        \n        \n            Windows 365\n            \n        \n        \n            Microsoft Industry\n            \n        \n        \n            Small Business Microsoft Cloud Microsoft Security Dynamics 365 Microsoft 365 for business Microsoft Power Platform Windows 365 Microsoft Industry Small Business Developer & IT  \n    Developer & IT  \n    \n        \n            Azure\n            \n        \n        \n            Microsoft Developer\n            \n        \n        \n            Microsoft Learn\n            \n        \n        \n            Support for AI marketplace apps\n            \n        \n        \n            Microsoft Tech Community\n            \n        \n        \n            Microsoft Marketplace\n            \n        \n        \n            Marketplace Rewards\n            \n        \n        \n            Visual Studio Azure Microsoft Developer Microsoft Learn Support for AI marketplace apps Microsoft Tech Community Microsoft Marketplace Marketplace Rewards Visual Studio Other\n    Other\n    \n        \n            Microsoft Rewards \n            \n        \n        \n            Free downloads & security\n            \n        \n        \n            Education\n            \n        \n        \n            Licensing\n            \n        \n        \n            Unlocked stories Microsoft Rewards Free downloads & security Education Licensing Unlocked stories View Sitemap No results",
+      "summary": ""
+    },
+    {
+      "heading": "Privacy at Microsoft",
+      "content": "Privacy at Microsoft",
+      "summary": ""
+    },
+    {
+      "heading": "Our commitment to privacy",
+      "content": "Our commitment to privacy",
+      "summary": ""
+    },
+    {
+      "heading": "Discover and control your data",
+      "content": "Discover and control your data",
+      "summary": ""
+    },
+    {
+      "heading": "Learn more about privacy at Microsoft",
+      "content": "Learn more about privacy at Microsoft Your privacy is important to us. The privacy statement explains the personal data Microsoft processes, how Microsoft processes it, and for what purposes. Privacy for young people is a page where young users can learn about and understand Microsoft's privacy practices and how to use our products in a way that protects their privacy. This page also highlights topics that may be helpful for parents and guardians. The privacy report includes new developments in privacy at Microsoft. Find the latest information on what personal data we collect, how it may be used, and how you can manage and control your data. Do you have a question about Microsoft privacy? We explain how customers can export or delete personal data and more in the Privacy FAQs. Learn more about how Microsoft approaches building a more inclusive, equitable, sustainable, and trusted future for everyone, and how technology can and must benefit the future of humanity and our planet. If you are in the U.S, please see our U.S State Data Privacy Notice.",
+      "summary": ""
+    },
+    {
+      "heading": "What's new?",
+      "content": "What's new?",
+      "summary": ""
+    },
+    {
+      "heading": "Contact our team",
+      "content": "Contact our team Surface Pro Surface Laptop Surface Laptop Studio 2 Copilot for organizations Copilot for personal use AI in Windows Explore Microsoft products Windows 11 apps Account profile Download Center Microsoft Store support Returns Order tracking Certified Refurbished Microsoft Store Promise Flexible Payments Microsoft in education Devices for education Microsoft Teams for Education Microsoft 365 Education How to buy for your school Educator training and development Deals for students and parents AI for education Microsoft Cloud Microsoft Security Dynamics 365 Microsoft 365 Microsoft Power Platform Microsoft Teams Microsoft 365 Copilot Small Business Azure Microsoft Developer Microsoft Learn Support for AI marketplace apps Microsoft Tech Community Microsoft Marketplace Marketplace Rewards Visual Studio Careers About Microsoft Company news Privacy at Microsoft Investors Diversity and inclusion Accessibility Sustainability Sitemap Contact Microsoft Privacy Manage cookies Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2025",
+      "summary": ""
+    }
+  ],
+  "related_links": [
+    "https://privacy.microsoft.com/",
+    "https://account.microsoft.com/privacy",
+    "https://aka.ms/PrivacyReport",
+    "https://privacy.microsoft.com/microsoft-consumer-health-data-privacy-policy",
+    "https://support.microsoft.com/topic/where-can-i-find-privacy-settings-in-microsoft-products-206f6928-2694-4adf-a50f-9edb95897d81",
+    "https://aka.ms/youngpeopleprivacy",
+    "https://aka.ms/PrivacyFAQ",
+    "https://aka.ms/USStatePrivacyNotice",
+    "https://privacy.microsoft.com/en-us",
+    "https://aka.ms/yourcaliforniaprivacychoices",
+    "https://www.microsoft.com/en-us/privacy#"
+  ],
+  "pdf_links": [],
+  "metadata": {
+    "scraper_used": "node",
+    "nlp_used": "distilbart-cnn-12-6",
+    "status": "success",
+    "timestamp": "2025-10-02T02:31:06.678Z"
+  }
+}
